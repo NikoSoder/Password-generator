@@ -10,6 +10,8 @@ let symbols = '!@#$%&*()_+=';
 let numbers = '0123456789';
 
 generateButton.addEventListener('click', () => {
+    if (passwordLength.value === '') alert('Choose password length');
+    
     let newPassword = [];
     for (let i = 0; i < passwordLength.value; i++) {
         newPassword.push(getSmallLetter());
@@ -21,4 +23,16 @@ generateButton.addEventListener('click', () => {
 
 function getSmallLetter() {
     return smallerLetters[Math.floor(Math.random() * smallerLetters.length)];
+}
+
+function getBigLetter() {
+    return bigLetters[Math.floor(Math.random() * bigLetters.length)];
+}
+
+function getSymbol() {
+    return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
+function getNumber() {
+    return numbers[Math.floor(Math.random() * numbers.length)];
 }
