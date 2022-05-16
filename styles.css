@@ -10,15 +10,12 @@ body {
 }
 
 .main-content {
-    height: 270px;
     width: 250px;
     border: 1px solid black;
     line-height: 35px;
     background-color: rgb(81, 148, 158);
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    
-
 }
 
 #password-display {
@@ -29,6 +26,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .options {
@@ -44,7 +44,9 @@ button {
     border: 1px solid black;
     margin-left: 27px;
     margin-top: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
+    border-radius: 5px;
     
 }
 
