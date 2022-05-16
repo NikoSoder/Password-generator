@@ -19,6 +19,7 @@ body {
 }
 
 #password-display {
+    min-height: 2em;
     background-color: rgb(102, 188, 201);
     border: 1px solid black;
     padding: 10px;
@@ -47,7 +48,6 @@ button {
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 5px;
-    
 }
 
 button:hover {
