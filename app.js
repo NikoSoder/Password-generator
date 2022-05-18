@@ -3,7 +3,8 @@ let passwordLength = document.getElementById('length');
 const uppercaseCheckbox = document.getElementById('upper');
 const symbolCheckbox = document.getElementById('symbols');
 const numberCheckbox = document.getElementById('numbers');
-const generateButton = document.querySelector('button');
+const generateButton = document.getElementById('generate');
+const copyButton = document.getElementById('copy');
 let smallerLetters = 'abcdefghijklmnopqrstuvwxyz';
 let bigLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let symbols = '!@#$%&*()_+=';
@@ -48,3 +49,10 @@ function getSymbol() {
 function getNumber() {
     return numbers[Math.floor(Math.random() * numbers.length)];
 }
+
+copyButton.addEventListener('click', () => {
+    if (passwordDisplay.textContent === '') return;
+    
+    navigator.clipboard.writeText(passwordDisplay.textContent);
+    alert('Password copied');
+});
