@@ -14,7 +14,19 @@ generateButton.addEventListener('click', () => {
     
     let newPassword = [];
     for (let i = 0; i < passwordLength.value; i++) {
-        newPassword.push(getSmallLetter());
+        if (newPassword.length < passwordLength.value) newPassword.push(getSmallLetter());
+        
+        if (uppercaseCheckbox.checked) {
+            if (newPassword.length < passwordLength.value) newPassword.push(getBigLetter());
+        }
+
+        if (symbolCheckbox.checked) {
+            if (newPassword.length < passwordLength.value) newPassword.push(getSymbol());
+        }
+
+        if (numberCheckbox.checked) {
+            if (newPassword.length < passwordLength.value) newPassword.push(getNumber());
+        }
     }
     newPassword = newPassword.join('');
     passwordDisplay.textContent = newPassword;
